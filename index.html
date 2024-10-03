@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title id="title">DOM tree structure</title>
+  </head>
+  <body>
+    <h1 id="firstHeading">DOM tree structure</h1>
+	<h2 id="secondHeading">Learn about the DOM</h2>
+    <button onclick="addElement()">onClik</button>
+  </body>
+  <script>
+     const h2 = document.getElementById('secondHeading')
+     h2.addEventListener('mouseover', (event)=> {
+        h2.style.color = 'red'
+        console.log(event)
+     })
+
+     h2.addEventListener('mouseout', ()=> {
+        h2.style.color = 'green'
+     })
+    function addElement(){
+        const h1 = document.getElementById('firstHeading')
+        const h3 =  document.createElement('h3')
+        h3.textContent = 'new Element'
+        h1.append(h3)
+    }
+  </script>
+</html>
