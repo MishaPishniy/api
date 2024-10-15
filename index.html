@@ -1,31 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="uk">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title id="title">DOM tree structure</title>
-  </head>
-  <body>
-    <h1 id="firstHeading">DOM tree structure</h1>
-	<h2 id="secondHeading">Learn about the DOM</h2>
-    <button onclick="addElement()">onClik</button>
-  </body>
-  <script>
-     const h2 = document.getElementById('secondHeading')
-     h2.addEventListener('mouseover', (event)=> {
-        h2.style.color = 'red'
-        console.log(event)
-     })
+    <title>Приклад HTML з CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="first.js"></script>
+</head>
+<body>
+    <script>
+        console.log("Hello world")
+        alert("Hello world")
+    </script>
+    <header>
+        <h1 class="highlight">Ласкаво просимо до прикладу HTML та CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Головна</a></li>
+                <li><a href="#">Про нас</a></li>
+                <li><a href="#">Послуги</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section">
+            <h2 >Вступ</h2>
+            <p class="highlight" >Це простий приклад HTML-сторінки зі стилями, створеними за допомогою CSS.</p>
+        </section>
 
-     h2.addEventListener('mouseout', ()=> {
-        h2.style.color = 'green'
-     })
-    function addElement(){
-        const h1 = document.getElementById('firstHeading')
-        const h3 =  document.createElement('h3')
-        h3.textContent = 'new Element'
-        h1.append(h3)
-    }
-  </script>
+        <table >
+
+            <tr>
+                <td>Sam</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Sam2</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Sam3</td>
+                <td>35</td>
+            </tr>
+        </table>
+
+        <table >
+
+            <tr>
+                <td>Sam</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Sam2</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Sam3</td>
+                <td>35</td>
+            </tr>
+        </table>
+
+
+
+
+        <section id="services-list">
+            <h2>Наші послуги</h2>
+            <ul >
+                <li >Розробка веб-сайтів</li>
+                <li >Тестування програмного забезпечення</li>
+                <li >SEO-оптимізація</li>
+            </ul>
+        </section>
+        <chrees-collor>
+            <span > Read</span>
+        </chrees-collor>
+    </main>
+    <footer>
+        <p>© 2024 Компанія WebStudio. Всі права захищені.</p>
+    </footer>
+</body>
 </html>
